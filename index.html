@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomas Francesco Frongia | Lean Operational Excellence</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <img src="images/me.jpg" alt="Tomas Francesco Frongia" class="header-photo">
+  <h1>Tomas Francesco Frongia</h1>
+  <p>Lean Operational Excellence | Interim Manager | DE/IT | Metall & Kunststoff</p>
+  <a href="#kontakt" class="btn">Kontakt / Contact</a>
+</header>
+
+<section>
+  <div class="lang-toggle">
+    <button onclick="switchLang('de')" class="active">DE</button>
+    <button onclick="switchLang('en')">EN</button>
+  </div>
+
+  <!-- DEUTSCH -->
+  <div id="de" class="lang active">
+    <h2>Über mich</h2>
+    <p>Ehemaliger Geschäftsführer mit über 20 Jahren Erfahrung in Deutschland und Italien. Ich habe Mehrschichtbetriebe geleitet, Produktionslinien stabilisiert und operative Margen nachhaltig verbessert. Heute unterstütze ich kleine und mittelständische Industrieunternehmen dabei, Methoden zur Verbesserung von Prozessen und Effizienz umzusetzen.</p>
+
+    <h2>Typische Herausforderungen</h2>
+    <ul>
+      <li>Sinkende Margen</li>
+      <li>Instabile Prozesse</li>
+      <li>Niedrige OEE-Werte</li>
+      <li>Hohe Durchlaufzeiten und versteckte Verschwendung</li>
+    </ul>
+
+    <h2>Mein Ansatz</h2>
+    <p>Praxisnaher Methodentransfer: OEE-Dashboards, SMED, Shopfloor-Management. Kein PowerPoint-Lean – sondern direkt messbare Ergebnisse.</p>
+
+    <h2>Fokus & Erfolge</h2>
+    <div class="grid">
+      <div class="card"><img src="images/process.jpg" alt="Prozess & Effizienz"><h3>Prozess- & Effizienzverbesserung</h3><p>Reduzierung von Verschwendung, Stabilisierung der Produktion, Erhöhung der Margen.</p></div>
+      <div class="card"><img src="images/method.jpg" alt="Hands-on Method Transfer"><h3>Hands-on Method Transfer</h3><p>Einführung von OEE-Dashboards, 5S und Shopfloor Management für Echtzeitkontrolle.</p></div>
+      <div class="card"><img src="images/workflow.jpg" alt="Workflow & Engpassoptimierung"><h3>Workflow & Engpassoptimierung</h3><p>Optimierung von Produktionsabläufen und Mehrschichtbetrieb.</p></div>
+      <div class="card"><img src="images/team.jpg" alt="Team Coaching"><h3>Team Enablement & Coaching</h3><p>Teams befähigen, Verbesserungen nachhaltig umzusetzen.</p></div>
+    </div>
+
+    <h2>Referenzen</h2>
+    <blockquote><strong>Gregorio Suriano:</strong> „Dank Tomas konnten wir Rüstzeiten um 40% reduzieren. Seine methodische Vorgehensweise und gezieltes Training verbesserten die Effizienz nachhaltig.“</blockquote>
+    <blockquote><strong>Carlo De Regis:</strong> „Bei Lenze Italien implementierte er SMED und TPM Systeme, steigerte die OEE über 95% und verbesserte die Produktivität um mehr als 10%.“</blockquote>
+  </div>
+
+  <!-- ENGLISH -->
+  <div id="en" class="lang">
+    <h2>About me</h2>
+    <p>Former managing director with over 20 years of experience in Germany and Italy. I led multi-shift operations, stabilized production lines, and sustainably improved operational margins. Today I help small and medium-sized industrial companies implement practical methods to improve processes and efficiency.</p>
+
+    <h2>Typical Challenges</h2>
+    <ul>
+      <li>Declining margins</li>
+      <li>Unstable processes</li>
+      <li>Low OEE values</li>
+      <li>High throughput times and hidden waste</li>
+    </ul>
+
+    <h2>My Approach</h2>
+    <p>Hands-on method transfer: OEE dashboards, SMED, shopfloor management. No PowerPoint Lean – practical methods delivering measurable results.</p>
+
+    <h2>Key Focus & Achievements</h2>
+    <div class="grid">
+      <div class="card"><img src="images/process.jpg" alt="Process & Efficiency Improvement"><h3>Process & Efficiency Improvement</h3><p>Reduce waste, stabilize operations, increase margins.</p></div>
+      <div class="card"><img src="images/method.jpg" alt="Hands-on Method Transfer"><h3>Hands-on Method Transfer</h3><p>Implement OEE dashboards, 5S and shopfloor management for real-time control.</p></div>
+      <div class="card"><img src="images/workflow.jpg" alt="Workflow & Bottleneck Optimization"><h3>Workflow & Bottleneck Optimization</h3><p>Optimize production flows and multi-shift operations.</p></div>
+      <div class="card"><img src="images/team.jpg" alt="Team Enablement & Coaching"><h3>Team Enablement & Coaching</h3><p>Equip teams to sustain improvements over time.</p></div>
+    </div>
+
+    <h2>References</h2>
+    <blockquote><strong>Gregorio Suriano:</strong> „Thanks to Tomas, we reduced setup times by 40%, improving overall efficiency.“</blockquote>
+    <blockquote><strong>Carlo De Regis:</strong> „Implementing SMED and TPM, we raised OEE above 95% and increased productivity by over 10%.“</blockquote>
+  </div>
+
+</section>
+
+<section id="kontakt">
+  <h2>Kontakt / Contact</h2>
+  <p>Interested in collaboration? / Interessiert an einer Zusammenarbeit?</p>
+  <a href="mailto:info@tomasfrongia.com" class="btn">Send Email / E-Mail senden</a>
+</section>
+
+<footer>
+  <p>© 2026 Tomas Francesco Frongia | www.tomasfrongia.com</p>
+</footer>
+
+<script>
+function switchLang(lang){
+  document.querySelectorAll('.lang').forEach(div=>div.classList.remove('active'));
+  document.getElementById(lang).classList.add('active');
+  document.querySelectorAll('.lang-toggle button').forEach(btn=>btn.classList.remove('active'));
+  document.querySelector(`[onclick="switchLang('${lang}')"]`).classList.add('active');
+}
+</script>
+
+</body>
+</html>
