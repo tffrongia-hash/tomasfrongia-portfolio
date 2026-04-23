@@ -919,3 +919,13 @@ h1, h2, h3 {
   color: var(--text-dark);
   line-height: 1.7;
 }
+/* === QUICK-CHECK SECTION === */
+.quickcheck-section {
+  background: var(--bg-lighter);
+  text-align: center;
+}
+
+.quickcheck-section .lead-text {
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl) auto;
+}
