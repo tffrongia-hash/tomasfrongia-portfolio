@@ -7,25 +7,32 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+ 
 <header>
   <div class="header-content">
     <img src="images/me.jpg" alt="Tomas Francesco Frongia" class="header-photo">
     <h1>Tomas Francesco Frongia</h1>
-    <p class="tagline">Stabilizing operations and restoring margins in manufacturing environments</p>
-    <p class="subtitle">Interim Operations Executive | DE/IT | Hands-on Leadership</p>
+ 
+    <!-- DEUTSCH -->
+    <p class="tagline" id="tagline-de">Produktion stabilisieren. Margen sichern. Sofort.</p>
+    <p class="subtitle" id="subtitle-de">Interim Operations Manager | Lean · SMED · OEE | DACH & Italy | sofort verfügbar</p>
+ 
+    <!-- ENGLISH -->
+    <p class="tagline" id="tagline-en" style="display:none;">Stable production. Secured margins. Available now.</p>
+    <p class="subtitle" id="subtitle-en" style="display:none;">Interim Operations Manager | Lean · SMED · OEE | DACH & Italy | available now</p>
+ 
     <a href="#kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
   </div>
 </header>
-
+ 
 <div class="lang-toggle">
   <button onclick="switchLang('de')" class="lang-btn active" id="btn-de">🇩🇪 Deutsch</button>
   <button onclick="switchLang('en')" class="lang-btn" id="btn-en">🇬🇧 English</button>
 </div>
-
+ 
 <!-- DEUTSCH -->
 <div id="de" class="lang active">
-
+ 
   <section class="about-section">
     <div class="container">
       <div class="section-header">
@@ -36,7 +43,7 @@
       <p style="text-align: justify;">Ich unterstütze Unternehmen, wenn Produktionslinien nicht stabil laufen, Margen schrumpfen oder Verantwortlichkeiten unklar sind. Mein Fokus: Stabilisierung von Produktion und Prozessen, OEE-Steigerung durch Shopfloor Management und SMED, sowie Aufbau klarer Führungsstrukturen. Kein PowerPoint-Lean – sondern messbare Ergebnisse direkt in der Produktion.</p>
     </div>
   </section>
-
+ 
   <section class="challenges-section">
     <div class="container">
       <div class="section-header">
@@ -67,7 +74,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section class="quickcheck-section">
     <div class="container">
       <div class="section-header">
@@ -78,7 +85,7 @@
       <a href="#kontakt" class="btn btn-primary">Jetzt anfragen</a>
     </div>
   </section>
-
+ 
   <section class="approach-section">
     <div class="container">
       <div class="section-header">
@@ -115,7 +122,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section class="focus-section">
     <div class="container">
       <div class="section-header">
@@ -162,7 +169,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section class="testimonials-section">
     <div class="container">
       <div class="section-header">
@@ -187,12 +194,12 @@
       </div>
     </div>
   </section>
-
+ 
 </div>
-
+ 
 <!-- ENGLISH -->
 <div id="en" class="lang">
-
+ 
   <section class="about-section">
     <div class="container">
       <div class="section-header">
@@ -203,7 +210,7 @@
       <p style="text-align: justify;">I step in when production lines are unstable, margins are shrinking, or accountability is unclear. My focus: stabilizing production and processes, improving OEE through Shopfloor Management and SMED, and building clear leadership structures. No PowerPoint lean – measurable results, directly on the shop floor.</p>
     </div>
   </section>
-
+ 
   <section class="challenges-section">
     <div class="container">
       <div class="section-header">
@@ -234,7 +241,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section class="quickcheck-section">
     <div class="container">
       <div class="section-header">
@@ -245,7 +252,7 @@
       <a href="#kontakt" class="btn btn-primary">Get in touch</a>
     </div>
   </section>
-
+ 
   <section class="approach-section">
     <div class="container">
       <div class="section-header">
@@ -282,7 +289,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section class="focus-section">
     <div class="container">
       <div class="section-header">
@@ -329,7 +336,7 @@
       </div>
     </div>
   </section>
-
+ 
   <section class="testimonials-section">
     <div class="container">
       <div class="section-header">
@@ -354,9 +361,9 @@
       </div>
     </div>
   </section>
-
+ 
 </div>
-
+ 
 <section id="kontakt" class="contact-section">
   <div class="container">
     <div class="section-header">
@@ -381,7 +388,7 @@
     <a href="mailto:info@tomasfrongia.com" class="btn btn-primary btn-large">E-Mail senden / Send Email</a>
   </div>
 </section>
-
+ 
 <footer>
   <div class="footer-content">
     <p class="footer-copyright">© 2026 Tomas Francesco Frongia | www.tomasfrongia.com</p>
@@ -392,16 +399,26 @@
     </nav>
   </div>
 </footer>
-
+ 
 <script>
-function switchLang(lang){
+function switchLang(lang) {
+  // Contenuto principale
   document.querySelectorAll('.lang').forEach(div => div.classList.remove('active'));
   document.getElementById(lang).classList.add('active');
+ 
+  // Bottoni lingua
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
   document.getElementById('btn-' + lang).classList.add('active');
+ 
+  // Header: tagline e subtitle
+  document.getElementById('tagline-de').style.display = lang === 'de' ? '' : 'none';
+  document.getElementById('subtitle-de').style.display = lang === 'de' ? '' : 'none';
+  document.getElementById('tagline-en').style.display = lang === 'en' ? '' : 'none';
+  document.getElementById('subtitle-en').style.display = lang === 'en' ? '' : 'none';
+ 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
-
+ 
 </body>
 </html>
