@@ -21,7 +21,8 @@
     <p class="tagline" id="tagline-en" style="display:none;">Stable production. Secured margins. Available now.</p>
     <p class="subtitle" id="subtitle-en" style="display:none;">Operations Expert | Former CEO | Lean · OEE · SMED | DACH & Italy</p>
 
-    <a href="#kontakt" class="btn btn-primary">Kontakt aufnehmen</a>
+    <a href="#kontakt" class="btn btn-primary" id="header-cta-de">Kontakt aufnehmen</a>
+    <a href="#kontakt" class="btn btn-primary" id="header-cta-en" style="display:none;">Get in touch</a>
   </div>
 </header>
 
@@ -368,9 +369,11 @@
   <div class="container">
     <div class="section-header">
       <span class="section-label">Let's Connect</span>
-      <h2>Kontakt / Contact</h2>
+      <h2 id="contact-title-de">Kontakt</h2>
+      <h2 id="contact-title-en" style="display:none;">Contact</h2>
     </div>
-    <p class="contact-intro">Bereit, Ihr Unternehmen voranzubringen? / Ready to grow your business together?</p>
+    <p class="contact-intro" id="contact-intro-de">Bereit, Ihr Unternehmen voranzubringen?</p>
+    <p class="contact-intro" id="contact-intro-en" style="display:none;">Ready to grow your business together?</p>
     <div class="contact-info">
       <div class="contact-item">
         <span class="contact-icon">📧</span>
@@ -389,7 +392,8 @@
         <a href="https://www.linkedin.com/in/tomas-francesco-frongia-5979bb3b/" target="_blank" rel="noopener noreferrer">LinkedIn Profil</a>
       </div>
     </div>
-    <a href="mailto:info@tomasfrongia.com" class="btn btn-primary btn-large">E-Mail senden / Send Email</a>
+    <a href="mailto:info@tomasfrongia.com" class="btn btn-primary btn-large" id="contact-btn-de">E-Mail senden</a>
+    <a href="mailto:info@tomasfrongia.com" class="btn btn-primary btn-large" id="contact-btn-en" style="display:none;">Send Email</a>
   </div>
 </section>
 
@@ -416,11 +420,21 @@ function switchLang(lang) {
   document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
   document.getElementById('btn-' + lang).classList.add('active');
 
-  // Header: tagline e subtitle
+  // Header: tagline, subtitle e CTA button
   document.getElementById('tagline-de').style.display = lang === 'de' ? '' : 'none';
   document.getElementById('subtitle-de').style.display = lang === 'de' ? '' : 'none';
   document.getElementById('tagline-en').style.display = lang === 'en' ? '' : 'none';
   document.getElementById('subtitle-en').style.display = lang === 'en' ? '' : 'none';
+  document.getElementById('header-cta-de').style.display = lang === 'de' ? '' : 'none';
+  document.getElementById('header-cta-en').style.display = lang === 'en' ? '' : 'none';
+
+  // Sezione contatto
+  document.getElementById('contact-title-de').style.display = lang === 'de' ? '' : 'none';
+  document.getElementById('contact-title-en').style.display = lang === 'en' ? '' : 'none';
+  document.getElementById('contact-intro-de').style.display = lang === 'de' ? '' : 'none';
+  document.getElementById('contact-intro-en').style.display = lang === 'en' ? '' : 'none';
+  document.getElementById('contact-btn-de').style.display = lang === 'de' ? '' : 'none';
+  document.getElementById('contact-btn-en').style.display = lang === 'en' ? '' : 'none';
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
