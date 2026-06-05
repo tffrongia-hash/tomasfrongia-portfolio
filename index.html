@@ -368,7 +368,8 @@
 <section id="kontakt" class="contact-section">
   <div class="container">
     <div class="section-header">
-      <span class="section-label">Let's Connect</span>
+      <span class="section-label" id="contact-label-de">Kontakt aufnehmen</span>
+      <span class="section-label" id="contact-label-en" style="display:none;">Let's Connect</span>
       <h2 id="contact-title-de">Kontakt</h2>
       <h2 id="contact-title-en" style="display:none;">Contact</h2>
     </div>
@@ -435,6 +436,8 @@ function switchLang(lang) {
   document.getElementById('contact-intro-en').style.display = lang === 'en' ? '' : 'none';
   document.getElementById('contact-btn-de').style.display = lang === 'de' ? '' : 'none';
   document.getElementById('contact-btn-en').style.display = lang === 'en' ? '' : 'none';
+  document.getElementById('contact-label-de').style.display = lang === 'de' ? '' : 'none';
+  document.getElementById('contact-label-en').style.display = lang === 'en' ? '' : 'none';
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
